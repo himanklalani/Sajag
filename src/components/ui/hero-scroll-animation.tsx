@@ -4,7 +4,7 @@ import { ReactLenis, useLenis } from 'lenis/react';
 import { useTransform, motion, useScroll, MotionValue, useMotionValueEvent } from 'motion/react';
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
-import { PhoneCall, CheckCircle2, ShieldCheck, Quote, Target, Compass } from 'lucide-react';
+import { PhoneCall, Mail, CheckCircle2, ShieldCheck, Quote, Target, Compass } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SajagHero from './sajag-hero';
@@ -381,6 +381,10 @@ export default function Component() {
         <a href="tel:+919867133221"
           className="bg-white text-zinc-950 w-12 h-12 rounded-full flex items-center justify-center shadow-[0_0_18px_rgba(255,255,255,0.4)] hover:scale-110 transition-transform">
           <PhoneCall className="w-4 h-4" />
+        </a>
+        <a href="mailto:scmails1@gmail.com"
+          className="bg-zinc-800 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-[0_0_18px_rgba(0,0,0,0.6)] hover:scale-110 transition-transform">
+          <Mail className="w-4 h-4" />
         </a>
       </div>
 
