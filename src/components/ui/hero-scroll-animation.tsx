@@ -73,7 +73,7 @@ const cards = [
     sections: [
       {
         label: 'Our Vision',
-        text: 'To be the most trusted partner and advocate for individuals and families looking to achieve their dream of home or commercial space on ownership basis. We aspire to guide our clients through the complex process of buying real estate with our deep expertise and a commitment to their best interests.',
+        text: 'To be the most trusted partner and consultant for individuals and families looking to achieve their dream of home or commercial space on ownership basis. We aspire to guide our clients through the complex process of buying real estate with our deep expertise and a commitment to their best interests.',
       },
       {
         label: 'Our Mission',

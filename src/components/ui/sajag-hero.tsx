@@ -110,7 +110,7 @@ export default function SajagHero() {
 
             {/* Body */}
             <BlurText
-              text="Sajag Infrastructure is your personal real estate advocate in the Mumbai and Thane markets. We provide comprehensive guidance through property inspections, structural audits, legal agreement reviews, and meticulous due diligence, ensuring your biggest life investment is secure, transparent and completely hassle-free."
+              text="Sajag Infrastructure is your personal real estate consultant in the Mumbai and Thane markets. We provide comprehensive guidance through property inspections, structural audits, legal agreement reviews, and meticulous due diligence, ensuring your biggest life investment is secure, transparent and completely hassle-free."
               delay={20}
               direction="top"
               stepDuration={0.25}
