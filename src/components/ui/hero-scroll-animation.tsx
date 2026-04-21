@@ -43,12 +43,12 @@ const cards = [
     label: 'Our Services',
     title: 'WHAT WE OFFER',
     paragraphs: [
-      'In depth clarity about market dynamics, useable carpet area, architectural plans, government permissions and persistent on ground assistance.',
-      'We will guide our customers through the property inspection process to help them identify potential concerns, structural issues and hidden costs.',
-      'We also comprehensively review Agreement For Sale (AFS), conducting rigorous legal due diligence & verifying title clearance for peace of mind.',
-      'We provide persistent assistance in AFS registration process, coordinating all regulatory filings & documentation for a seamless transition.',
-      
-    ],
+  'In-depth clarity about market dynamics, usable carpet area, architectural plans, government permissions, along with persistent on-ground assistance.',
+  
+  'We guide customers through the property inspection process to identify potential concerns, structural issues, and hidden costs, ensuring informed decision-making.',
+  
+  'We comprehensively review the Agreement for Sale (AFS), conduct rigorous legal due diligence, verify title clearance, and provide end-to-end assistance with AFS registration, including all regulatory filings and documentation for a seamless transition.'
+],
   },
   {
     id: 'choose',
