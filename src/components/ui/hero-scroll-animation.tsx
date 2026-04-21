@@ -158,15 +158,15 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                   delay={70}
                   direction="top"
                   stepDuration={0.4}
-                  className="card-bebas text-6xl sm:text-7xl text-zinc-900 mb-6 leading-none flex flex-wrap"
+                  className="card-bebas text-5xl sm:text-6xl text-zinc-900 mb-4 leading-none flex flex-wrap"
                 />
 
-                <div className="space-y-6 mt-2">
+                <div className="space-y-3 mt-1">
                   {data.paragraphs.map((para, j) => (
                     <div key={j} className="block group">
-                      <div className="flex items-start gap-4 p-5 rounded-2xl hover:bg-white transition-colors duration-300 border border-transparent hover:border-zinc-200 shadow-sm hover:shadow-md">
-                        <div className="shrink-0 mt-0.5 flex items-center justify-center w-8 h-8 rounded-full bg-[#fbbf24]/20 text-[#d97706] group-hover:scale-110 transition-transform duration-300">
-                          <CheckCircle2 className="w-4 h-4" />
+                      <div className="flex items-start gap-3 p-3.5 rounded-xl hover:bg-white transition-colors duration-300 border border-transparent hover:border-zinc-200 shadow-sm hover:shadow-md">
+                        <div className="shrink-0 mt-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-[#fbbf24]/20 text-[#d97706] group-hover:scale-110 transition-transform duration-300">
+                          <CheckCircle2 className="w-3 h-3" />
                         </div>
                         {/* Body ScrollReveal */}
                         <ScrollReveal
@@ -174,7 +174,7 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                           enableBlur={true}
                           baseRotation={2}
                           blurStrength={3}
-                          textClassName="text-[14px] sm:text-[15px] leading-relaxed text-zinc-600 font-medium"
+                          textClassName="text-[12px] sm:text-[13px] leading-relaxed text-zinc-600 font-medium"
                         >
                           {para}
                         </ScrollReveal>
