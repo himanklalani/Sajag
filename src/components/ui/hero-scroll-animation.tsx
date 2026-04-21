@@ -240,16 +240,16 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                 <Quote className="w-32 sm:w-48 h-32 sm:h-48 rotate-180" strokeWidth={0.5} />
               </div>
 
-              <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-10 md:gap-16 relative z-20">
-                <div className="w-48 h-[20rem] md:w-72 md:h-[30rem] rounded-[2rem] overflow-hidden shadow-2xl flex-shrink-0 relative">
+              <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-6 md:gap-10 relative z-20">
+                <div className="w-36 h-[16rem] md:w-56 md:h-[24rem] rounded-[1.5rem] overflow-hidden shadow-2xl flex-shrink-0 relative">
                   <Image
                     src="/sajagbest.avif"
                     alt="Sanjay Chopra, Advisor"
                     fill
-                    sizes="(max-width: 768px) 192px, 288px"
+                    sizes="(max-width: 768px) 144px, 224px"
                     className="object-cover object-top transition-all duration-700"
                   />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]" />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[1.5rem]" />
                 </div>
 
                 <div className="flex flex-col justify-center max-w-lg">
@@ -265,21 +265,21 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                     delay={70}
                     direction="top"
                     stepDuration={0.45}
-                    className="card-cormorant text-5xl sm:text-6xl font-bold italic text-zinc-900 mb-6 leading-tight flex flex-wrap"
+                    className="card-cormorant text-4xl sm:text-5xl font-bold italic text-zinc-900 mb-4 leading-tight flex flex-wrap"
                   />
-                  <div className="border-l-4 border-[#fbbf24] pl-6 italic">
+                  <div className="border-l-[3px] border-[#fbbf24] pl-4 italic">
                     {/* Body */}
                     <ScrollReveal
                       baseOpacity={0}
                       enableBlur={true}
                       baseRotation={2}
                       blurStrength={3}
-                      textClassName="text-[15px] sm:text-[16px] leading-relaxed text-zinc-600"
+                      textClassName="text-[12px] sm:text-[13px] leading-relaxed text-zinc-600"
                     >
                       {data.body ? `"${data.body}"` : ''}
                     </ScrollReveal>
                   </div>
-                  <div className="flex items-center justify-center md:justify-start gap-4 mt-8">
+                  <div className="flex items-center justify-center md:justify-start gap-3 mt-5">
                     <div className="w-8 h-px bg-zinc-400" />
                     <span className="font-semibold text-zinc-900 uppercase tracking-[0.2em] text-[10px]">Sanjay Chopra</span>
                   </div>
@@ -292,35 +292,35 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
           {data.id === 'vision' && 'sections' in data && (
             <div className="flex-1 flex items-center justify-center p-4 sm:p-8 md:p-14 relative overflow-hidden">
               <div className="w-full max-w-5xl mx-auto text-left relative z-20 flex flex-col justify-center h-full pt-4 md:pt-20 lg:pt-28">
-                <div className="text-center mb-6 sm:mb-12 md:mb-16">
+                <div className="text-center mb-4 sm:mb-8 md:mb-10">
                   {/* "PURPOSE DRIVEN" — Bebas Neue via BlurText */}
                   <BlurText
                     text="PURPOSE DRIVEN"
                     delay={70}
                     direction="top"
                     stepDuration={0.4}
-                    className="card-bebas text-6xl sm:text-7xl md:text-8xl text-white mb-2 sm:mb-4 justify-center flex flex-wrap"
+                    className="card-bebas text-5xl sm:text-6xl md:text-7xl text-white mb-1 sm:mb-2 justify-center flex flex-wrap"
                   />
                   <p className="text-[#fbbf24] uppercase tracking-[0.22em] text-[9px] sm:text-[11px] font-semibold mt-2">
                     The foundation of our commitment
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4 sm:gap-8 md:gap-12">
+                <div className="grid md:grid-cols-2 gap-3 sm:gap-5 md:gap-8">
                   {data.sections?.map(({ label, text }, idx) => (
-                    <div key={label} className="bg-zinc-900/60 backdrop-blur-md border border-white/10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2rem] hover:bg-zinc-800 transition-colors duration-500 group relative overflow-hidden">
+                    <div key={label} className="bg-zinc-900/60 backdrop-blur-md border border-white/10 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl hover:bg-zinc-800 transition-colors duration-500 group relative overflow-hidden">
                       <div className="absolute top-0 right-0 p-8 opacity-[0.03] transform translate-x-1/4 -translate-y-1/4 pointer-events-none group-hover:scale-110 transition-transform duration-700 hidden sm:block">
                         {idx === 0 ? <Compass className="w-48 h-48 text-[#fbbf24]" strokeWidth={0.5} /> : <Target className="w-48 h-48 text-[#fbbf24]" strokeWidth={0.5} />}
                       </div>
 
-                      <div className="flex sm:flex-col items-center sm:items-start gap-4 sm:gap-6 relative z-10 mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-[#fbbf24]/10 text-[#fbbf24] shadow-lg shadow-[#fbbf24]/5 group-hover:scale-110 group-hover:bg-[#fbbf24]/20 transition-all duration-500 shrink-0">
-                          {idx === 0 ? <Compass className="w-5 h-5 sm:w-7 sm:h-7" /> : <Target className="w-5 h-5 sm:w-7 sm:h-7" />}
+                      <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-4 relative z-10 mb-3">
+                        <div className="flex items-center justify-center w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#fbbf24]/10 text-[#fbbf24] shadow-lg shadow-[#fbbf24]/5 group-hover:scale-110 group-hover:bg-[#fbbf24]/20 transition-all duration-500 shrink-0">
+                          {idx === 0 ? <Compass className="w-4 h-4 sm:w-5 sm:h-5" /> : <Target className="w-4 h-4 sm:w-5 sm:h-5" />}
                         </div>
-                        <h3 className="text-base sm:text-lg uppercase tracking-[0.15em] text-zinc-100 font-bold">{label}</h3>
+                        <h3 className="text-sm sm:text-base uppercase tracking-[0.15em] text-zinc-100 font-bold">{label}</h3>
                       </div>
 
-                      <div className="h-px w-full bg-gradient-to-r from-[#fbbf24]/40 to-transparent my-4 sm:my-6 relative z-10" />
+                      <div className="h-px w-full bg-gradient-to-r from-[#fbbf24]/40 to-transparent my-3 sm:my-4 relative z-10" />
 
                       {/* Section body with ScrollReveal */}
                       <ScrollReveal
@@ -328,7 +328,7 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                         enableBlur={true}
                         baseRotation={1}
                         blurStrength={4}
-                        textClassName="text-[13px] sm:text-[15px] leading-relaxed sm:leading-loose text-zinc-400 transition-colors duration-500 relative z-10"
+                        textClassName="text-[12px] sm:text-[13px] leading-relaxed text-zinc-400 transition-colors duration-500 relative z-10"
                       >
                         {text}
                       </ScrollReveal>
