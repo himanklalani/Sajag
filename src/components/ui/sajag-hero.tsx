@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowRight, ShieldCheck, Award, Clock, MapPin, CheckCircle2 } from "lucide-react";
 import BlurText from "./BlurText";
@@ -15,31 +16,33 @@ const StatCard = ({
   </div>
 );
 
+// Font classes now reference CSS vars from next/font (no @import needed here)
+const HERO_FONTS = `
+  .sajag-hero  { font-family: var(--font-dm-sans, 'DM Sans'), sans-serif; }
+  .sajag-display { font-family: var(--font-cormorant, 'Cormorant Garamond'), serif; }
+  .sajag-bebas  { font-family: var(--font-bebas, 'Bebas Neue'), sans-serif; letter-spacing: 0.04em; }
+  @keyframes marqueeRoll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-track { animation: marqueeRoll 38s linear infinite; }
+`;
+
 export default function SajagHero() {
   return (
     <div className="relative w-full h-full overflow-hidden font-sans bg-zinc-950 text-white">
 
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap');
-
-        .sajag-hero { font-family: 'DM Sans', sans-serif; }
-        .sajag-display { font-family: 'Cormorant Garamond', serif; }
-        .sajag-bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
-
-        @keyframes marqueeRoll {
-          from { transform: translateX(0); }
-          to   { transform: translateX(-50%); }
-        }
-
-        .marquee-track { animation: marqueeRoll 38s linear infinite; }
-      `}</style>
+      <style>{HERO_FONTS}</style>
 
       {/* ── Full-bleed interior photo ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
+        <Image
           src="/interior_hero.png"
           alt="Luxury interior"
-          className="w-full h-full object-cover object-center"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-zinc-950/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-zinc-950/20" />

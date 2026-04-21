@@ -3,6 +3,7 @@
 import { ReactLenis, useLenis } from 'lenis/react';
 import { useTransform, motion, useScroll, MotionValue, useMotionValueEvent } from 'motion/react';
 import React, { useRef, useState } from 'react';
+import Image from 'next/image';
 import { PhoneCall, CheckCircle2, ShieldCheck, Quote, Target, Compass } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,12 +13,11 @@ import BlurText from './BlurText';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Font styles injected once at module level
-const FONT_STYLE = `
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
-  .card-bebas { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.06em; }
-  .card-cormorant { font-family: 'Cormorant Garamond', serif; }
-  .card-dm { font-family: 'DM Sans', sans-serif; }
+// Font class helpers — backed by CSS vars from next/font in layout.tsx
+const FONT_CLASSES = `
+  .card-bebas { font-family: var(--font-bebas), sans-serif; letter-spacing: 0.06em; }
+  .card-cormorant { font-family: var(--font-cormorant), serif; }
+  .card-dm { font-family: var(--font-dm-sans), sans-serif; }
 `;
 
 // ── Syncs Lenis smooth scroll with GSAP ScrollTrigger ──────────────────────────
@@ -242,7 +242,13 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
 
               <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center text-center md:text-left gap-10 md:gap-16 relative z-20">
                 <div className="w-48 h-[20rem] md:w-72 md:h-[30rem] rounded-[2rem] overflow-hidden shadow-2xl flex-shrink-0 relative">
-                  <img src="/sajagbest.avif" alt="Sanjay Chopra, Advisor" className="w-full h-full object-cover object-top transition-all duration-700" />
+                  <Image
+                    src="/sajagbest.avif"
+                    alt="Sanjay Chopra, Advisor"
+                    fill
+                    sizes="(max-width: 768px) 192px, 288px"
+                    className="object-cover object-top transition-all duration-700"
+                  />
                   <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-[2rem]" />
                 </div>
 
@@ -349,15 +355,18 @@ export default function Component() {
 
   return (
     <ReactLenis root>
-      <style>{FONT_STYLE}</style>
+      <style>{FONT_CLASSES}</style>
       {/* Syncs Lenis scroll position with GSAP ScrollTrigger */}
       <LenisGsapSync />
 
       {/* Sticky yellow logo */}
       <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none flex justify-center py-6 drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
-        <img
+        <Image
           src="/logo.png"
           alt="Sajag Infrastructure"
+          width={112}
+          height={112}
+          priority
           className="h-16 md:h-20 w-auto object-contain"
           style={{ filter: 'brightness(0) saturate(100%) invert(80%) sepia(41%) saturate(1025%) hue-rotate(338deg) brightness(100%) contrast(97%)' }}
         />
