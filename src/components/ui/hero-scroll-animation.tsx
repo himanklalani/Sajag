@@ -335,6 +335,13 @@ const StackCard = ({ i, data, targetScale, progress, range }: CardProps) => {
                     </div>
                   ))}
                 </div>
+                
+                {/* Developer credit */}
+                <div className="mt-16 sm:mt-24 text-center opacity-80 pb-8">
+                  <p className="text-[12px] sm:text-[14px] uppercase tracking-[0.4em] text-white font-medium">
+                    developed by himanklalani@gmail.com
+                  </p>
+                </div>
               </div>
             </div>
           )}
